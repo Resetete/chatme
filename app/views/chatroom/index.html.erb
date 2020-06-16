@@ -14,14 +14,14 @@
         </div> <!-- end 12 wide column -->
 
       <div class="extra content">
-        <form class="ui replay form">
+        <%= form_for(@message, html: { class: 'ui reply form', role: 'form' }, url: message_path) do |f| %>
           <div class="field">
             <div class="ui fluid icon input">
-              <input type="text" placeholder="Enter a message . . .">
-              <i class="bordered red inverted icon edit"> </i>
+              <%= f.text_field :message, placeholder: 'Enter a message . . .' %>
+              <%= f.button '<i class="bordered red inverted icon edit"> </i>'.html_safe %>
             </div>
           </div>
-        </form>
+        <% end %>
       </div>
     </div>
   </div>
