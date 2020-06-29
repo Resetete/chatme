@@ -10,6 +10,10 @@ $font-color-highlight: #DB2828;
   height: 60vh;
 }
 
+#messages {
+  overflow: auto;
+}
+
 .more-space {
   margin-top: 30px !important;
 }
