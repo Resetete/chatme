@@ -12,9 +12,15 @@ $font-color-highlight: #DB2828;
 
 #messages {
   overflow: auto;
-  height: 15em; 
+  height: 15em;
 }
 
 .more-space {
   margin-top: 30px !important;
+}
+
+.input {
+  button {
+    display: none; 
+  }
 }
