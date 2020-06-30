@@ -4,6 +4,11 @@ class SessionsController < ApplicationController
   def new # login form and submit data
   end
 
+  def show # show users messages and details
+    @user = current_user
+    @user_messages = current_user.messages
+  end
+
   def create # handle new form login data
     user = User.find_by(username: params[:session][:username])
     if user && user.authenticate(params[:session][:password])

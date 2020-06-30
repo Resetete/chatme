@@ -1,0 +1,9 @@
+<h1 class="ui center aligned header more-space"> Welcome <%= @user.username.capitalize %> </h1>
+
+<h2> Your messages </h2>
+
+<% @user_messages.each do |msg| %>
+<p>
+  <%= msg.message %> - <%= time_ago_in_words(msg.created_at) %> ago
+</p>
+<% end %>
