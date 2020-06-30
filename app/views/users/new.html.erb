@@ -1,18 +1,25 @@
 <h1 class="ui center aligned header more-space"> Welcome to ChatMe now a complete messaging app</h1>
 <h2 class="ui center aligned large icon header">
-  <i class="circular inverted red plug icon"></i>
-  Log in to continue
+  <i class="circular inverted red signup icon"></i>
+  Sign up
 </h2>
 
 <div class="ui placeholder segment">
-  <div class="ui two column very relaxed stackable grid">
+  <div class="ui one column very relaxed stackable grid">
     <div class="column">
-      <%= form_for(:session, html: { class: "ui form", role: "form" }, url: login_path) do |f| %>
+      <%= form_for(:user, html: { class: "ui form", role: "form" }, url: signup_path) do |f| %>
         <div class="field">
           <%= f.label :username, "Username" %>
           <div class="ui left icon input">
             <%= f.text_field :username, placeholder: "Username" %>
             <i class="user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :email, "Email" %>
+          <div class="ui left icon input">
+            <%= f.text_field :email, placeholder: "Email" %>
+            <i class="mail icon"></i>
           </div>
         </div>
         <div class="field">
@@ -22,14 +29,8 @@
             <i class="lock icon"></i>
           </div>
         </div>
-        <%= f.button "Login", class: "ui red submit button" %>
+        <%= f.button "Sign up", class: "ui red submit button" %>
         <% end %>
       </div>
-
-    <div class="middle aligned column">
-        <%= link_to "<i class='signup icon'></i> Sign up".html_safe , signup_path, class: 'ui big red button' %>    </div>
-  </div>
-  <div class="ui vertical divider">
-    Or
   </div>
 </div>
