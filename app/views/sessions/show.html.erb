@@ -1,5 +1,7 @@
-<h2 class="ui center aligned large icon header more-space">
-  <i class="circular inverted red user outline icon"></i>
+<h2 class="ui center aligned icon header more-space">
+    <i class="ui circular image">
+      <%= gravatar_for(@user) %>
+    </i> <br>
   Welcome <%= @user.username.capitalize %>
 </h2>
 
