@@ -3,10 +3,19 @@
   Welcome <%= @user.username.capitalize %>
 </h2>
 
-<h2> Your messages </h2>
+<h3> Your messages </h3>
 
-<% @user_messages.each do |msg| %>
-<p>
-  <%= msg.message %> - <%= time_ago_in_words(msg.created_at) %> ago
-</p>
-<% end %>
+<div class="ui center">
+
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatbox">
+        <div class="content" id="messages">
+          <div class="ui feed">
+            <% @user_messages.each do |msg| %>
+            <p> <%= msg.message %> - <%= time_ago_in_words(msg.created_at) %> ago </p>
+            <% end %>
+          </div> <!-- end ui feed -->
+        </div> <!-- end 12 wide column -->
+    </div>
+  </div>
+</div>
