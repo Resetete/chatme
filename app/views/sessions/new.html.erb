@@ -1,4 +1,4 @@
-<h1 class="ui center aligned header more-space"> Welcome to ChatMe now a complete messaging app</h1>
+<h1 class="ui center aligned header more-space"> Welcome to ChatMe now a complete messaging app </h1>
 <h2 class="ui center aligned large icon header">
   <i class="circular inverted red plug icon"></i>
   Log in to continue
@@ -31,5 +31,16 @@
   </div>
   <div class="ui vertical divider">
     Or
+  </div>
+</div>
+
+<div class="ui two column very relaxed stackable grid more-space">
+  <div class="column right aligned">
+    <i class="circular inverted large red user icon"> </i> <br>
+    <p> <%= @users.count %> signed up users </p>
+  </div>
+  <div class="column left aligned">
+    <i class="circular inverted large red write icon"> </i>
+    <p> <%= @messages.count %> messages</p>
   </div>
 </div>

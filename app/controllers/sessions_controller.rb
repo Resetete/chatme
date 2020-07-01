@@ -2,6 +2,8 @@ class SessionsController < ApplicationController
   before_action :logged_in_redirect, only: [:new, :create]
 
   def new # login form and submit data
+    @messages = Message.all
+    @users = User.all
   end
 
   def show # show users messages and details
