@@ -24,10 +24,10 @@ scroll_bottom = function() {
 }
 
 submit_message = function() {
-  $('#message_message').on('keydown', function(e) {
-    if (e.keycode == 13) {
+  $('#message_message').on('keydown', function(event) {
+    if (event.keyCode == 13) {
       $('button').click();
-      e.target.value = "";
+      event.target.value = "";
     };
   });
 };
