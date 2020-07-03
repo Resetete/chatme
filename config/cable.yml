@@ -6,4 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: redis://redistogo:97330e1b98c31d8d2aa0d0cd45d2dab9@pearlfish.redistogo.com:9395/
+  url: Rails.application.credentials.redis[:url]
