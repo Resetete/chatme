@@ -6,4 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: Rails.application.credentials.redis[:url]
+  url: Rails.application.credentials.redis[:redis_to_go_url]
